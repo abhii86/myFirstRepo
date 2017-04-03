@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="shortcut icon" type="image/x-icon" href="image/vticon.ico">
+        <script src="lib/angular.js"></script>
+        <script src="01.js"></script>
+    </head>
+    <body ng-app="myApp" style="border:1px solid cyan; padding:10px;">
+        
+        <div ng-controller="parentController" style="border:1px solid green;padding:10px;">
+            <div id="inputFields" style="border:1px solid magenta; padding:5px">
+                <label for="txtNameId" style="cursor:pointer">Name of parent</label>
+                <input type="text" ng-model="name" id="txtNameId"><br>
+                <label for="txtSalryId">Salary of parent</label>
+                <input type="text" ng-model="salary"><br>
+            </div>
+            Name in parent: {{name}}<br>
+            Salary of parent: {{salary}}<br>
+            Company of parent: {{company}}
+            <div ng-controller="childController" style="border:2px solid red">
+                Name in child: {{name}}<br>
+                Address of child : {{address}} <br>
+                House address of child :{{getHouseAddress()}}
+            </div>
+        </div>
+        
+    </body>
+</html>
